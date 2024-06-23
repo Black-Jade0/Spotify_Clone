@@ -1,0 +1,725 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: roboto;
+}
+*::-webkit-scrollbar {
+    width: 0px;
+}
+.container {
+    box-sizing: border-box;
+    gap: 10px;
+}
+.left {
+    flex-flow: column;
+    width: 25vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 10px 0px 10px 10px;
+}
+.right {
+    position: relative;
+    width: 75vw;
+    padding: 15px;
+    padding-left: 0px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.right-div {
+    overflow-y: hidden;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: linear-gradient(
+        to bottom,
+        rgb(30, 30, 30),
+        rgb(18, 18, 18)
+    );
+}
+.home {
+    height: 25%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.home-div {
+    flex-flow: column;
+    height: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    height: 30%;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    align-items: end;
+    justify-content: space-between;
+}
+.logo-img {
+    height: 70%;
+}
+.logo-cross{
+    height: 70%;
+    width: 20px;
+    margin-right: 10px;
+    z-index: -1;
+}
+.logo-cross:hover{
+    cursor: pointer;
+}
+.home ul {
+    display: inline-flex;
+    flex-flow: column;
+    height: 70%;
+    justify-content: space-around;
+    padding: 10px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+.home ul li {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 15px;
+    height: 50%;
+    color: grey;
+    font-weight: 600;
+    font-size: 90%;
+}
+.home ul li:hover {
+    cursor: pointer;
+    color: white;
+    transform: scale(1);
+}
+.home ul li span {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.home ul li:hover span {
+    transform: scale(1.1);
+}
+.home ul li img {
+    width: 20px;
+    height: 70%;
+}
+.library {
+    height: 75%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.library-div {
+    display: flex;
+    /* justify-content: space-around; */
+    flex-flow: column;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+.libhead {
+    height: 10%;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 20px;
+    font-size: 12px;
+    padding: 0px 20px;
+}
+.libhead img {
+    height: 90%;
+    max-height: 30px;
+}
+.libhead h2 {
+    display: flex;
+    align-items: center;
+    height: 80%;
+}
+.song-list {
+    height: 85%;
+    padding: 5px 0px 5px 10px;
+    box-sizing: border-box;
+}
+.song-list ul {
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: column;
+    gap: 2px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+.song-list ul::-webkit-scrollbar {
+    width: 0px;
+}
+.song-list ul li {
+    position: relative;
+    display: flex;
+    /* gap: 10px; */
+    align-items: center;
+    box-sizing: border-box;
+    margin-right: 10px;
+    box-sizing: border-box;
+    min-height: 60px;
+    border-radius: 5px;
+}
+.song-list ul li > img {
+    width: 20%;
+    height: 55%;
+    padding: auto;
+    justify-self: right;
+}
+.song-list ul li:hover {
+    cursor: pointer;
+    background-color: rgb(32, 32, 32);
+    cursor: pointer;
+}
+.slist-desc {
+    width: 80%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    color: white;
+    height: 100%;
+    width: 60%;
+    flex-flow: column;
+}
+.slist-desc-name {
+    font-size: 17px;
+    font-weight: 700;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.slist-desc-singer {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(169, 169, 169);
+}
+.slist-button {
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0px 10px;
+}
+.slist-button img {
+    opacity: 0;
+    transform: translateX(-5px);
+    height: 55%;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.song-list ul li:hover > .slist-button img {
+    opacity: 1;
+    transform: translateX(0px);
+}
+.slist-button img:hover {
+    height: 60%;
+}
+.footer {
+    width: 100%;
+    height: 5%;
+    min-height: 10px;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 10px;
+    color: grey;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 0;
+}
+.footer div{
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* width: 16.66%; */
+}
+.footer a {
+    color: grey;
+}
+.header {
+    display: flex;
+    align-items: center;
+    height: 12%;
+    width: 100%;
+}
+.header-div {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    background-color: rgb(31, 31, 31, 0);
+}
+.nav {
+    height: 100%;
+    gap: 20%;
+    margin-left: 5px;
+}
+.nav img {
+    width: 35px;
+    height: 100%;
+    border-radius: 100px;
+    background-color: rgb(255, 255, 255);
+}
+.hamburger-div{
+    position: absolute;
+    z-index: -2;
+}
+.nav img:hover {
+    cursor: pointer;
+}
+.button {
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+    height: 50px;
+    align-items: center;
+    width: 250px;
+}
+.button-div {
+    display: flex;
+    justify-content: center;
+    width: 110px;
+}
+.signupbutton button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 100px;
+    background-color: rgb(23, 23, 23);
+    color: rgb(201, 201, 201);
+    transition: background-color 0.3s ease-in, width 0.3s ease-in,
+        height 0.3s ease-in, color 0.3s ease-in;
+}
+.loginbutton button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 100px;
+    background-color: rgb(182, 182, 182);
+    color: rgb(22, 22, 22);
+    transition: background-color 0.3s ease-in, width 0.3s ease-in,
+        height 0.3s ease-in, color 0.3s ease-in;
+}
+.signupbutton button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+}
+.loginbutton button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    height: 100%;
+    width: 100%;
+}
+.spotify-playlist {
+    height: 88%;
+    width: 100%;
+}
+.spotify-playlist-div {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.spotify-playlist-div-h1 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 10%;
+    width: 100%;
+}
+.card-container {
+    height: 90%;
+    gap: 10px 0px;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: normal;
+    width: 100%;
+    max-width: 2000px;
+}
+.card-container::-webkit-scrollbar {
+    width: 0px;
+}
+.card {
+    position: relative;
+    padding: 15px 10px;
+    /* min-width: 130px; */
+    max-width: 200px;
+    width: auto;
+    height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card:hover {
+    cursor: pointer;
+    background-color: rgb(35, 35, 35);
+}
+.card-img-div{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.card-img-div > img {
+    width: 100%;
+    border-radius: 5px;
+}
+.play-button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.play-button img {
+    position: absolute;
+    border-radius: 100%;
+    width: 50px;
+    right: 8px;
+    bottom: 15px;
+    filter: brightness(1.2);
+    transform: translateY(20%);
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+.card:hover .play-button img{
+    cursor: pointer;
+    transform: translateY(0%);
+    opacity: 1;
+    box-shadow: 0px 5px 10px 1px black;
+}
+@keyframes big-play{
+    from{}
+    to{
+        transform: scale(1.09);
+    }
+}
+.play-button img:hover {
+    animation: big-play 0s forwards;
+    filter: brightness(1.4);
+}
+.card-desc {
+    padding: 5px 0px;
+}
+.card-desc-singer {
+    height: 10%;
+    font-size: 13px;
+    padding: 5px 0px;
+    line-height: 1.8;
+    color: grey;
+    font-weight: 700;
+}
+.player {
+    transform: translateY(150%);
+    transition: transform 0.3s;
+    position: absolute;
+    background-color: black;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    justify-content: center;
+    align-items: center;
+    height: 13%;
+    bottom: 0px;
+    left: 0px;
+}
+.player-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 5%; */
+    box-sizing: border-box;
+    height: 80%;
+    width: 100%;
+}
+.player-song {
+    padding: 5px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 25%;
+    height: 100%;
+}
+.player-song img{
+    height: 60%;
+    width: min-content;
+}
+.player-song-desc {
+    width: 80%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    color: white;
+    height: 100%;
+    width: 60%;
+    flex-flow: column;
+}
+.player-song-name {
+    font-size: 17px;
+    font-weight: 700;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.player-song-singer {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(169, 169, 169);
+}
+.player-button-container {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.player-button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    max-height: 30px;
+}
+.player-button-img:hover {
+    cursor: pointer;
+}
+.prev-song {
+    height: 80%;
+}
+.next-song {
+    height: 80%;
+}
+.play-pause {
+    height: 100%;
+}
+.player-volume {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    justify-content: center;
+    gap: 2%;
+    padding-right: 2.5%;
+    box-sizing: border-box;
+}
+.player-volume-img{
+    height: 35%;
+    width: 30%;
+}
+.player-volume-img:hover{
+    cursor: pointer;
+}
+.volume-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 70%;
+    padding: 0px 10px;
+    border-radius: 100px;
+    background-color: rgb(30, 30, 30);
+}
+.volume-bar-div{
+    box-sizing: border-box;
+    width: 90%;
+    height: 0px;
+    margin: 3px 0px;
+    border: solid white;
+    border-width: 2px 0px;
+}
+.volume-bar-div:hover{
+    cursor: pointer;
+}
+.volume-ball{
+    position: relative;
+    width: 100%;
+}
+.volume-ball::before{
+    opacity: 1;
+    content: "";
+    position: absolute;
+    width: var(--before-width,100%);
+    height: auto;
+    border: solid rgb(56, 86, 254);
+    border-width: 3px 0px;
+    top: -3px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+/* .volume-ball::after{
+    content: "";
+    position: absolute;
+    border: solid rgb(255, 255, 255);
+    border-width: 2px 0px;
+    top: -2px;
+    right: 0px;
+} */
+.volume-ball img{
+    opacity: 0;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    transition: all 0.3s ease;
+}
+.volume-ball:hover img{
+    opacity: 1;
+}
+.timing{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timing span{
+    color: rgb(194, 194, 194);
+    font-weight: 600;
+}
+.play-bar {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+.play-bar-div {
+    cursor: pointer;
+    position: relative;
+    height: 0%;
+    width: 80%;
+    border: solid white;
+    border-width: 2px 0px;
+    box-sizing: border-box;
+    transition: left 0.4s ease;
+}
+.play-bar-ball img {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: -5px;
+    left: -2.5px;
+}
+.play-bar-div:hover div img {
+    transform: scale(1.4);
+}
+@media screen and (max-width: 840px) {
+    .left {
+        background-color: black;
+        width: 90vw;
+        position: absolute;
+        transform: translateX(-230%);
+        z-index: 2;
+        transition: all 0.4s;
+    }
+    .card-container{
+        justify-content: center;
+    }
+    .right{
+        width: 100vw;
+        padding-left: 15px;
+    }
+    .spotify-playlist-div-h1{
+        justify-content: center;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav-buttons{
+        position: absolute;
+        z-index: -1;
+    }
+    .hamburger-div{
+        display: flex;
+        position: static;
+        z-index: 1;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+    .hamburger{
+        height: 100%;
+        z-index: 1;
+        position: static;
+        z-index: 1;
+        margin-left: 10px;
+    }
+    .logo-cross{
+        z-index: 1;
+    }
+    .card{
+        width: 80%;
+        max-width: 90%;
+        height: auto;
+    }
+    .card-desc{
+        font-size: 1.4em;
+        margin: 20px 10px;
+    }
+    .card-desc-singer{
+        font-size: 20px;
+    }
+    .player-song{
+        width: 30%;
+        padding: 5px 0px;
+    }
+    .player-song img{
+        width: 0px;
+    }
+    .player-song-desc{
+        width: 100%;
+    }
+    .player-song-desc{
+        padding: 0px 5px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .player-button-container{
+        justify-content: center;
+        gap: 3%;
+        width: 40%;
+    }
+    .player-button-div{
+        width: 20%;
+        height: auto;
+    }
+    .player-button-div img{
+        width: 100%;
+    }
+    .player-volume{
+        width: 30%;
+    }
+    .player-timing{
+        width: 30%;
+        font-size: 10px;
+    }
+
+}
