@@ -187,7 +187,7 @@ console.log("Jainam");
 // }
 
 async function display_cards() {
-    let a = await fetch(`songs`);
+    let a = await fetch(`./songs`);
     let response = await a.text();
     console.log(response);
 
