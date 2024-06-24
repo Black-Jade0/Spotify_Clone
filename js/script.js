@@ -187,7 +187,7 @@ console.log("Jainam");
 // }
 
 async function display_cards() {
-    let a = await fetch(`songs/`);
+    let a = await fetch(`./songs/`);
     let response = await a.text();
     console.log(response);
 
@@ -280,7 +280,7 @@ async function getsongs(folder) {
         let raw_element = as[index];
         if (raw_element.href.endsWith(".mp3")) {
             songs.push(
-                raw_element.href.split("/songs/")[1].replaceAll("%20", " ")
+                raw_element.href.split("songs/")[1].replaceAll("%20", " ")
             );
         }
     }
