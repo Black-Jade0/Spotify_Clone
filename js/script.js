@@ -259,6 +259,8 @@ async function display_cards() {
         newCard.addEventListener("click", async (item) => {
             console.log("fetching songs");
             let songs = await getsongs(`${newCard.getAttribute("info")}`);
+            let element_left = document.querySelector(".left");
+            element_left.style.transform = `translateX(0%)`;
         });
     }
 }
